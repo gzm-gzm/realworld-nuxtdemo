@@ -70,6 +70,8 @@ import { login, register } from "../../api/user";
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 export default {
+  // 验证登录后的操作
+  middleware:'notAuthenticated',
   name: "loginIndex",
   // 通过计算属性 
   computed: {
